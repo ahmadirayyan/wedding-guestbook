@@ -1,22 +1,15 @@
 <template>
     <div>
-        <div class="card" v-for="signature in signatures">
-            <div class="card-header">
-                <span class="glyphicon glyphicon-user" id="start"></span>
-                <label id="started">By</label> {{ signature.name }}
-            </div>
+        <div class="card mt-3 mb-3" v-for="signature in signatures">
             <div class="card-body">
-                <div class="col-md-2">
-                    <div class="thumbnail">
-                        <img :src="signature.avatar" :alt="signature.name">
-                    </div>
-                </div>
-                <p>{{ signature.body }}</p>
-            </div>
-            <div class="card-footer">
-                <span class="glyphicon glyphicon-calendar" id="visit"></span> {{ signature.date }} |
-                <span class="glyphicon glyphicon-flag" id="comment"></span>
-                <a href="#" id="comments" @click="report(signature.id)">Report</a>
+                <h5 class="card-title">{{ signature.name }}</h5>
+                <p class="card-text">{{ signature.body }}</p>
+                <p class="card-text">
+                    <small>
+                        <span class="glyphicon glyphicon-calendar" id="visit"></span> {{ signature.date }} |
+                        <span class="glyphicon glyphicon-flag" id="comment"></span> <a href="#" id="comments" @click="report(signature.id)">Report</a>
+                    </small>
+                </p>
             </div>
         </div>
         <paginate
@@ -24,14 +17,20 @@
                 :click-handler="fetch"
                 :prev-text="'Prev'"
                 :next-text="'Next'"
-                :container-class="'pagination'">
+                :container-class="'pagination'"
+                :page-class="'page-item'"
+                :page-link-class="'page-link'"
+                :prev-class="'page-item'"
+                :next-class="'page-item'"
+                :prev-link-class="'page-link'"
+                :next-link-class="'page-link'"
+                :active-class="'active'">
         </paginate>
     </div>
 </template>
 
 <script>
     export default {
-
         data() {
             return {
                 signatures: [],

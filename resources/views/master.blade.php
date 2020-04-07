@@ -9,15 +9,17 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-findcond">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ route('home') }}">Wedding Guestbook</a>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav navbar-right">
+                <a class="navbar-brand" href="{{ route('home') }}">Wedding Guestbook</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerMenu" aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerMenu">
+                    <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a href="{{ route('sign') }}" class="nav-link">Fill the Guestbook</a>
+                            <signature-form></signature-form>
                         </li>
                     </ul>
                 </div>
