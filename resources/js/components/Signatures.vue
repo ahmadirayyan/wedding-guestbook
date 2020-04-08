@@ -64,6 +64,12 @@
                     return signature.id !== id;
                 });
             }
+        },
+
+        mounted() {
+            this.$root.$on('refreshGuestbook', () => {
+                this.fetch();
+            })
         }
     }
 </script>

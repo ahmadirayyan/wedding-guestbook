@@ -2010,9 +2010,10 @@ __webpack_require__.r(__webpack_exports__);
       swal({
         title: "Thank you!",
         text: "We have saved your signature.",
-        icon: "success"
+        icon: "success",
+        timer: 2000
       }).then(function (value) {
-        _this2.$refs.signatureComp.report(100);
+        _this2.$root.$emit('refreshGuestbook');
       });
     },
     reset: function reset() {
@@ -2104,6 +2105,13 @@ __webpack_require__.r(__webpack_exports__);
         return signature.id !== id;
       });
     }
+  },
+  mounted: function mounted() {
+    var _this3 = this;
+
+    this.$root.$on('refreshGuestbook', function () {
+      _this3.fetch();
+    });
   }
 });
 

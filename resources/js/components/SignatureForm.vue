@@ -98,9 +98,10 @@
                     title: "Thank you!",
                     text: "We have saved your signature.",
                     icon: "success",
+                    timer: 2000
                 })
                 .then((value) => {
-                    this.$refs.signatureComp.report(100);
+                    this.$root.$emit('refreshGuestbook');
                 });
             },
 
