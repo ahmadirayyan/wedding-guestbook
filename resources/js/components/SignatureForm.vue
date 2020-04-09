@@ -1,12 +1,12 @@
 <template>
     <div>
-        <button type="button" class="btn btn-outline-light my-2 my-sm-0" data-toggle="modal" data-target="#fillModal">Fill the Guestbook</button>
+        <button type="button" class="btn btn-outline-light my-2 my-sm-0" data-toggle="modal" data-target="#fillModal">Sign Here</button>
         <div class="modal fade" id="fillModal" tabindex="-1" role="dialog" aria-labelledby="fillModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <form class="form-horizontal" method="post" @submit.prevent="onSubmit">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="fillModalLabel">Fill the Guestbook</h5>
+                            <h5 class="modal-title" id="fillModalLabel">Guest's Signature</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>

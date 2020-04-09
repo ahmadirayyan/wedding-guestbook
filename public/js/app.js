@@ -37510,7 +37510,7 @@ var render = function() {
           "data-target": "#fillModal"
         }
       },
-      [_vm._v("Fill the Guestbook")]
+      [_vm._v("Sign Here")]
     ),
     _vm._v(" "),
     _c(
@@ -37744,7 +37744,7 @@ var staticRenderFns = [
       _c(
         "h5",
         { staticClass: "modal-title", attrs: { id: "fillModalLabel" } },
-        [_vm._v("Fill the Guestbook")]
+        [_vm._v("Guest's Signature")]
       ),
       _vm._v(" "),
       _c(
