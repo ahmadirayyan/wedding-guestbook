@@ -37501,19 +37501,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c(
-      "button",
-      {
-        staticClass: "btn btn-outline-light my-2 my-sm-0",
-        attrs: {
-          type: "button",
-          "data-toggle": "modal",
-          "data-target": "#fillModal"
-        }
-      },
-      [_vm._v("Sign Here")]
-    ),
-    _vm._v(" "),
-    _c(
       "div",
       {
         staticClass: "modal fade",

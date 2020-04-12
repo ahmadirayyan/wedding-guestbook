@@ -6,10 +6,11 @@
     <title>Wedding Guestbook</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css">
+    @yield('libcss')
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('home') }}">AA's Wedding Guests</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerMenu" aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,14 +20,17 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerMenu">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <signature-form></signature-form>
+                           <button type="button" class="btn btn-outline-light my-2 my-sm-0" data-toggle="modal" data-target="#fillModal">Sign Here</button>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
         @yield('content')
+
+        <signature-form></signature-form>
     </div>
     <script src="{{ mix('js/app.js') }}"></script>
+    @yield('libjs')
 </body>
 </html>

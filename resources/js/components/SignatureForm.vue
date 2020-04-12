@@ -1,6 +1,5 @@
 <template>
     <div>
-        <button type="button" class="btn btn-outline-light my-2 my-sm-0" data-toggle="modal" data-target="#fillModal">Sign Here</button>
         <div class="modal fade" id="fillModal" tabindex="-1" role="dialog" aria-labelledby="fillModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
