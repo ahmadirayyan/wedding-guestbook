@@ -2,24 +2,7 @@
 
 @section('libcss')
     <style>
-        .carousel {
-            height: calc(100vh);
-            padding-top: 54px;
-        }
-
-        .carouse-inner, .carousel-item {
-            height: 100%;
-        }
-
-        .carousel-item {
-            background-color: #000;
-        }
-
-        .carousel-item img {
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
+        
     </style>
 @endsection
 

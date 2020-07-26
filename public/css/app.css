@@ -10886,3 +10886,25 @@ html {
   scroll-behavior: smooth;
 }
 
+.carousel {
+  height: calc(100vh);
+  padding-top: 54px;
+}
+
+.carouse-inner,
+.carousel-item {
+  height: 100%;
+}
+
+.carousel-item {
+  background-color: #000;
+}
+
+.carousel-item img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
