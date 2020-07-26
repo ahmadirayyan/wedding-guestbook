@@ -10888,7 +10888,6 @@ html {
 
 .carousel {
   height: calc(100vh);
-  padding-top: 54px;
 }
 
 .carouse-inner,
@@ -10906,5 +10905,10 @@ html {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+.scrollable {
+  height: 100vh;
+  overflow-y: auto;
 }
 
